@@ -23,8 +23,8 @@ keys unset/commented in `.env`, or edit `.env` directly. Use an absolute path fo
 To copy this local repo from your Mac to the Spark (before configuring it there):
 
 ```bash
-ssh saiseeker@spark-c64c 'mkdir -p ~/repos'
-scp -r ~/repos/microduck-rl saiseeker@spark-c64c:~/repos/
+ssh user@spark 'mkdir -p ~/repos'
+scp -r ~/repos/microduck-rl user@spark:~/repos/
 ```
 
 ## Setup and training — run on the Spark
@@ -101,7 +101,7 @@ Start TensorBoard/playback on the Spark, then leave this Mac command running:
 ```
 
 Open [TensorBoard](http://localhost:6006/) and [Viser](http://localhost:8080/).
-`SPARK_HOST` defaults to `saiseeker@spark-c64c`. The tunnel forwards both ports;
+`SPARK_HOST` defaults to `spark`. The tunnel forwards both ports;
 each service still needs to be started on the Spark. `VIEWER_PORT` sets the
 tunnel destination, not Viser's server configuration; Viser defaults to 8080.
 If the tunnel says a local port is occupied, use your existing tunnel or stop it
